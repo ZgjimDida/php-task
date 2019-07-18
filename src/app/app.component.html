@@ -7,7 +7,19 @@
         <label for="trackingCode">Tracking Code</label>
         <input id="trackingCode" class="form-control" required="" autofocus="" #trackingId>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="button" (click)="trackItem(trackingId.value)">Track
-        Item</button>
+    <div class="text-center mb-4">
+        <p>
+            <ng-container *ngIf="result?.error">
+                {{result?.error}}
+            </ng-container>
+            <ng-container *ngIf="result?.estimatedDeliveryDate">
+                Your item will be delivered on {{result?.estimatedDeliveryDate | date}}
+            </ng-container>
+        </p>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="button"
+        (click)="trackItem(trackingId.value);trackingId.value = ''">
+        Track Item
+    </button>
 </form>
 <router-outlet></router-outlet>
