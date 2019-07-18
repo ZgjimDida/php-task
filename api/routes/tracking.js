@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 /* GET tracking listing. */
-router.get('/', async function (req, res, next) {
-	return res.json({ test: 123 });
+router.get('/:id', async function (req, res, next) {
+	return res.json({ test: req.params.id });
 });
 
 module.exports = router;

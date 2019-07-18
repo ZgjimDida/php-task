@@ -11,7 +11,7 @@ export class AppComponent {
 
   }
 
-  ngOnInit(){
-    this.trackingService.getEstimatedDate();
+  trackItem(trackingId: string) {
+    this.trackingService.trackItem(trackingId);
   }
 }
