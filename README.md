@@ -2,10 +2,10 @@
 
 A simple Angular application which can show the shipment date of an item.
 
-## Development server
+## Setting up the project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Run `npm install` in the main folder.
+2. Run `npm install` in the api folder.
+3. Run `npm start` in the api folder.
+4. Run `ng serve --proxy-config proxy.conf.json` in the main folder.
+5. Open `http://localhost:4200` to view the project
